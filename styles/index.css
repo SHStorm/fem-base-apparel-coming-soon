@@ -143,6 +143,8 @@ body {
   border: 0.1rem solid hsla(0, 36%, 70%, 0.5);
 
   background-color: transparent;
+
+  outline: none;
 }
 
 .input::placeholder {
@@ -174,6 +176,8 @@ body {
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
   box-shadow: 0 1.5rem 2rem hsla(0, 50%, 74%, 0.4);
+
+  outline: none;
 }
 
 .button:hover, .button:focus {
