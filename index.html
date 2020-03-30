@@ -10,6 +10,8 @@
 
   <link rel="stylesheet" href="/styles/index.css">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script src="/scripts/index.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -26,7 +28,7 @@
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
 
-      <form class="form" autocomplete="off">
+      <form id="form" class="form" autocomplete="off">
         <div class="field">
           <label for="email" class="sr-only">Email Address</label>
           <input id="email" class="input" type="email" name="email" placeholder="Email Address" required>
@@ -37,7 +39,7 @@
           </button>
         </div>
 
-        <strong class="error error-visible">Please provide a valid email</strong>
+        <strong id="error" class="error" hidden>Please provide a valid email</strong>
       </form>
     </main>
   </div>
