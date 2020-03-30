@@ -1,0 +1,269 @@
+/* Custom CSS Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  display: flex;
+  min-height: 100%;
+  box-sizing: border-box;
+
+  font-size: 62.5%; /* make 1rem = 10px for comfortable px => rem conversions */
+}
+
+body {
+  flex: 1;
+
+  font-size: 1.6rem; /* set body font-size back to 16px */
+}
+
+h1, h2, h3, h4, h5, h6, input, button {
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/* Main Styles */
+body {
+  color: hsl(0, 36%, 70%);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.4rem;
+
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8.5rem 25rem 46.5rem;
+  grid-template-areas: 'header' 'hero' 'content';
+
+  max-width: 37.5rem;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.header, .content {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  opacity: 0.75;
+}
+
+.header {
+  grid-area: header;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero {
+  grid-area: hero;
+
+  background-image: url('/images/hero-mobile.jpg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+}
+
+.content {
+  grid-area: content;
+  padding-top: 6.5rem;
+  padding-bottom: 9rem;
+
+  text-align: center;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo-img {
+  display: block;
+  width: 10rem;
+}
+
+.title {
+  color: hsl(0, 6%, 24%);
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.1rem;
+  line-height: 1.05;
+}
+
+.title-accent {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+.text {
+  margin-top: 1.5rem;
+
+  line-height: 1.6;
+}
+
+.form {
+  margin-top: 3rem;
+}
+
+.field {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+
+  color: hsl(0, 6%, 24%);
+
+  border-radius: 3rem;
+  border: 1px solid hsla(0, 36%, 70%, 0.5);
+
+  background-color: transparent;
+}
+
+.input::placeholder {
+  opacity: 0.4;
+}
+
+.input:hover, .field:focus {
+  border-color: hsl(0, 36%, 70%);
+}
+
+.input:invalid {
+  border-width: 0.2rem;
+  border-color: hsl(0, 93%, 68%);
+
+  background: transparent url("/images/icon-error.svg") no-repeat calc(80% - 1.5rem) center / 2rem 2rem;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 20%;
+
+  border: none;
+  border-radius: 3rem;
+
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+  box-shadow: 0 1.5rem 2rem hsla(0, 50%, 74%, 0.4);
+}
+
+.error {
+  display: inline-block;
+  margin-top: 1rem;
+
+  color: hsl(0, 93%, 68%);
+
+  visibility: hidden;
+}
+
+.error-visible {
+  visibility: visible;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, hsl(0, 80%, 91%), hsl(0, 74%, 79%));
+  box-shadow: 0 1.5rem 2rem hsla(0, 50%, 74%, 0.6);
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr 61rem;
+    grid-template-rows: 16rem 1fr;
+    grid-template-areas: 'header hero' 'content hero';
+    max-width: 144rem;
+
+    background: url('/images/bg-pattern-desktop.svg') no-repeat 0 0 / calc(100% - 61rem) auto;
+  }
+
+  .header, .content {
+    padding: 0;
+    width: 44.5rem;
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+
+  .header {
+
+  }
+
+  .hero {
+    height: 100%;
+
+    background-image: url('/images/hero-desktop.jpg');
+  }
+
+  .content {
+    padding-top: 7rem;
+
+    text-align: left;
+  }
+
+  .logo-img {
+    width: 15.8rem;
+  }
+
+  .title {
+    font-size: 6.4rem;
+    letter-spacing: 1.7rem;
+    line-height: 1.08;
+  }
+
+  .title-accent {
+    line-height: 1.05;
+  }
+
+  .text {
+    margin-top: 2rem;
+
+    line-height: 1.75;
+  }
+
+  .form {
+    margin-top: 4rem;
+  }
+
+  .input {
+    padding: 1.9rem 3rem;
+  }
+
+  .input:invalid {
+    background: transparent url("/images/icon-error.svg") no-repeat calc(77.5% - 1.5rem) center / 2.4rem 2.4rem;
+  }
+
+  .button {
+    width: 22.5%;
+  }
+
+  .error {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

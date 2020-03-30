@@ -7,21 +7,39 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <link rel="stylesheet" href="/styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="container">
+    <header class="header">
+      <a class="logo" href="/"><img class="logo-img" src="/images/logo.svg" alt="Base Apparel Logo"></a>
+    </header>
 
-  We're coming soon
+    <div class="hero"></div>
 
-  Hello fellow shoppers! We're currently building our new fashion store.
-  Add your email below to stay up-to-date with announcements and our launch deals.
+    <main class="content">
+      <h1 class="title"><span class="title-accent">We're</span><br>coming<br>soon</h1>
+      <p class="text">
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
 
-  Email Address
+      <form class="form" autocomplete="off">
+        <div class="field">
+          <label for="email" class="sr-only">Email Address</label>
+          <input id="email" class="input" type="email" name="email" placeholder="Email Address" required>
 
-  <footer>
-    <p>
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.frontendmentor.io/profile/SHStorm" target="_blank">Your Name Here</a>.
-    </p>
-  </footer>
+          <button class="button">
+            <img class="button-icon" src="/images/icon-arrow.svg" alt="" aria-hidden="true">
+            <span class="sr-only">Subscribe</span>
+          </button>
+        </div>
+
+        <strong class="error error-visible">Please provide a valid email</strong>
+      </form>
+    </main>
+  </div>
 </body>
 </html>
