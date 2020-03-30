@@ -140,7 +140,7 @@ body {
   color: hsl(0, 6%, 24%);
 
   border-radius: 3rem;
-  border: 1px solid hsla(0, 36%, 70%, 0.5);
+  border: 0.1rem solid hsla(0, 36%, 70%, 0.5);
 
   background-color: transparent;
 }
@@ -157,7 +157,7 @@ body {
   border-width: 0.2rem;
   border-color: hsl(0, 93%, 68%);
 
-  background: transparent url("/images/icon-error.svg") no-repeat calc(80% - 1.5rem) center / 2rem 2rem;
+  background: transparent url('/images/icon-error.svg') no-repeat calc(80% - 1.5rem) center / 2rem 2rem;
 }
 
 .button {
@@ -188,7 +188,8 @@ body {
   box-shadow: 0 1.5rem 2rem hsla(0, 50%, 74%, 0.6);
 }
 
-@media (min-width: 750px) {
+/* Tablets and Mobile Landscape - from 750px */
+@media (min-width: 46.875rem) {
   body {
     font-size: 1.6rem;
   }
@@ -205,7 +206,8 @@ body {
   }
 }
 
-@media (min-width: 1000px) {
+/* Tablets Landscape - from 1000px */
+@media (min-width: 62.5rem) {
   .container {
     grid-template-rows: 12rem minmax(50rem, 40%) 1fr;
   }
@@ -244,7 +246,7 @@ body {
   }
 
   .input.invalid {
-    background: transparent url("/images/icon-error.svg") no-repeat calc(77.5% - 1.5rem) center / 2.4rem 2.4rem;
+    background: transparent url('/images/icon-error.svg') no-repeat calc(77.5% - 1.5rem) center / 2.4rem 2.4rem;
   }
 
   .button {
@@ -257,7 +259,8 @@ body {
   }
 }
 
-@media (min-width: 1150px) {
+/* Desktops and Larger - from 1150px */
+@media (min-width: 71.875rem) {
   .container {
     grid-template-columns: 1fr 42.4%;
     grid-template-rows: 16rem 1fr;
