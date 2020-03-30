@@ -4,7 +4,7 @@ const $form = document.getElementById('form');
 const $email = $form.elements.namedItem('email');
 const $error = document.getElementById('error');
 
-$form.setAttribute('novalidate', true);
+$form.setAttribute('novalidate', '');
 
 $form.addEventListener('submit', e => {
     e.preventDefault();
