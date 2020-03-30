@@ -176,16 +176,16 @@ body {
   box-shadow: 0 1.5rem 2rem hsla(0, 50%, 74%, 0.4);
 }
 
+.button:hover, .button:focus {
+  background: linear-gradient(135deg, hsl(0, 80%, 91%), hsl(0, 74%, 79%));
+  box-shadow: 0 1.5rem 2rem hsla(0, 50%, 74%, 0.6);
+}
+
 .error {
   display: inline-block;
   margin-top: 1rem;
 
   color: hsl(0, 93%, 68%);
-}
-
-.button:hover, .button:focus {
-  background: linear-gradient(135deg, hsl(0, 80%, 91%), hsl(0, 74%, 79%));
-  box-shadow: 0 1.5rem 2rem hsla(0, 50%, 74%, 0.6);
 }
 
 /* Tablets and Mobile Landscape - from 750px */
